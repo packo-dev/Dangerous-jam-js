@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dangerous Harvest - Nothing is Safe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="bg-animation"></div>
+
+    <div id="start-screen">
+        <div id="logo-container">
+            <img id="logo" src="assets/img/logo.svg" alt="Dangerous Harvest">
+        </div>
+
+        <div id="buttons-container">
+            <button id="play-btn" class="btn btn-play">PLAY</button>
+            <button id="rules-btn" class="btn btn-rules">RULES</button>
+            <button id="leaderboard-btn" class="btn btn-leaderboard">LEADERBOARD</button>
+        </div>
+
+        <p class="credits">Le Fermier - Game Jam 2026</p>
+    </div>
+
+    <!-- RULES MODAL -->
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <h2>How to Play</h2>
+            <ul class="rules-list">
+                <li><span class="key-hint">WASD</span> / <span class="key-hint">ZQSD</span> / <span class="key-hint">Arrow Keys</span> to move</li>
+                <li>
+                    <img src="assets/img/carrot-safe.svg" class="rules-icon" alt="safe">
+                    <span class="safe-text">Green items</span> are safe — collect them for points!
+                </li>
+                <li>
+                    Items <span class="warning-text">flash yellow</span> before mutating...
+                </li>
+                <li>
+                    <img src="assets/img/carrot-danger.svg" class="rules-icon" alt="danger">
+                    <span class="danger-text">Red items</span> are hostile — they chase you!
+                </li>
+                <li>You have <span class="life-text">5 lives</span> — lose them all, it's Game Over</li>
+                <li>Every 30s a new <strong>WAVE</strong> starts — faster and deadlier</li>
+                <li>Random <span class="danger-text">"NOTHING IS SAFE"</span> events turn ALL items hostile</li>
+                <li>Survive as long as you can and beat your high score!</li>
+            </ul>
+            <button id="rules-back-btn" class="btn btn-back">BACK</button>
+        </div>
+    </div>
+
+    <!-- LEADERBOARD MODAL -->
+    <div id="leaderboard-modal" class="modal">
+        <div class="modal-content leaderboard-box">
+            <h2>Leaderboard</h2>
+            <div id="leaderboard-list" class="leaderboard-list">
+                <p class="leaderboard-empty">No scores yet. Be the first!</p>
+            </div>
+            <button id="leaderboard-back-btn" class="btn btn-back">BACK</button>
+        </div>
+    </div>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

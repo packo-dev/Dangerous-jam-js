@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="field-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#1a2a15"/>
+      <stop offset="100%" style="stop-color:#0a0f08"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#1e3318" stroke-width="0.5" opacity="0.4"/>
+    </pattern>
+    <radialGradient id="spot1" cx="30%" cy="40%"><stop offset="0%" style="stop-color:#1e3318;stop-opacity:0.5"/><stop offset="100%" style="stop-color:transparent"/></radialGradient>
+    <radialGradient id="spot2" cx="70%" cy="60%"><stop offset="0%" style="stop-color:#1e3318;stop-opacity:0.3"/><stop offset="100%" style="stop-color:transparent"/></radialGradient>
+  </defs>
+
+  <!-- Base -->
+  <rect width="1920" height="1080" fill="url(#field-grad)"/>
+
+  <!-- Grid pattern (field rows) -->
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+
+  <!-- Ambient light spots -->
+  <rect width="1920" height="1080" fill="url(#spot1)"/>
+  <rect width="1920" height="1080" fill="url(#spot2)"/>
+
+  <!-- Scattered grass tufts -->
+  <g fill="#1a3012" opacity="0.3">
+    <circle cx="200" cy="300" r="40"/><circle cx="800" cy="150" r="30"/>
+    <circle cx="1400" cy="400" r="35"/><circle cx="500" cy="700" r="25"/>
+    <circle cx="1100" cy="850" r="45"/><circle cx="1600" cy="200" r="28"/>
+    <circle cx="300" cy="900" r="32"/><circle cx="1700" cy="700" r="38"/>
+    <circle cx="960" cy="540" r="50"/>
+  </g>
+
+  <!-- Border vignette -->
+  <rect width="1920" height="1080" fill="url(#field-grad)" opacity="0.3"/>
+</svg>

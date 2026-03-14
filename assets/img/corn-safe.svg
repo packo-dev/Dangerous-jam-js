@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Husk leaves -->
+  <path d="M14 16 C8 12, 6 22, 14 24" fill="#8bc34a" stroke="#689f38" stroke-width="1"/>
+  <path d="M34 16 C40 12, 42 22, 34 24" fill="#8bc34a" stroke="#689f38" stroke-width="1"/>
+  <!-- Top silk -->
+  <path d="M22 6 C20 2, 24 0, 24 6" stroke="#795548" stroke-width="1" fill="none"/>
+  <path d="M24 6 C24 0, 28 2, 26 6" stroke="#795548" stroke-width="1" fill="none"/>
+  <!-- Cob -->
+  <rect x="16" y="8" width="16" height="34" rx="8" fill="#fdd835" stroke="#f9a825" stroke-width="1"/>
+  <!-- Kernels -->
+  <circle cx="21" cy="16" r="2" fill="#ffb300"/><circle cx="27" cy="16" r="2" fill="#ffb300"/>
+  <circle cx="21" cy="22" r="2" fill="#ffb300"/><circle cx="27" cy="22" r="2" fill="#ffb300"/>
+  <circle cx="21" cy="28" r="2" fill="#ffb300"/><circle cx="27" cy="28" r="2" fill="#ffb300"/>
+  <circle cx="24" cy="34" r="2" fill="#ffb300"/>
+</svg>

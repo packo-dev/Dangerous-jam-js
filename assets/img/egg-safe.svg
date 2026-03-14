@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Shadow -->
+  <ellipse cx="24" cy="44" rx="10" ry="3" fill="#000" opacity="0.15"/>
+  <!-- Egg body -->
+  <ellipse cx="24" cy="26" rx="13" ry="17" fill="#fafafa" stroke="#e0e0e0" stroke-width="1"/>
+  <!-- Highlight -->
+  <ellipse cx="19" cy="20" rx="4" ry="6" fill="#fff" opacity="0.7"/>
+</svg>

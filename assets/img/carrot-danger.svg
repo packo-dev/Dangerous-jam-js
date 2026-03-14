@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- Angry leaves -->
+  <path d="M20 8 C16 0, 12 4, 16 12" fill="#8b0000" stroke="#5c0000" stroke-width="1"/>
+  <path d="M24 5 C24 -2, 30 0, 26 10" fill="#a00000" stroke="#5c0000" stroke-width="1"/>
+  <path d="M28 8 C34 0, 36 6, 30 12" fill="#8b0000" stroke="#5c0000" stroke-width="1"/>
+  <!-- Body -->
+  <path d="M16 12 L24 44 L32 12 Z" fill="#d32f2f" stroke="#b71c1c" stroke-width="1.5" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- Angry eyes -->
+  <circle cx="21" cy="22" r="2.5" fill="#ffeb3b"/>
+  <circle cx="27" cy="22" r="2.5" fill="#ffeb3b"/>
+  <circle cx="21" cy="22" r="1" fill="#000"/>
+  <circle cx="27" cy="22" r="1" fill="#000"/>
+  <!-- Angry mouth -->
+  <path d="M20 28 L24 26 L28 28" stroke="#000" stroke-width="1.5" fill="none"/>
+  <!-- Teeth -->
+  <rect x="22" y="27" width="2" height="3" rx="0.5" fill="#fff"/>
+  <rect x="25" y="27" width="2" height="3" rx="0.5" fill="#fff"/>
+</svg>

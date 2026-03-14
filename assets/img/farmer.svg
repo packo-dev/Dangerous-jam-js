@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Hat -->
+  <rect x="14" y="6" width="36" height="8" rx="3" fill="#c8a24c"/>
+  <rect x="8" y="12" width="48" height="5" rx="2" fill="#b8923c"/>
+
+  <!-- Head -->
+  <rect x="20" y="17" width="24" height="20" rx="4" fill="#f5c89a"/>
+
+  <!-- Eyes -->
+  <rect x="26" y="24" width="4" height="4" rx="1" fill="#333"/>
+  <rect x="34" y="24" width="4" height="4" rx="1" fill="#333"/>
+
+  <!-- Smile -->
+  <path d="M28 32 Q32 36 36 32" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Body (overalls) -->
+  <rect x="18" y="37" width="28" height="18" rx="3" fill="#4a7c3f"/>
+  <rect x="24" y="37" width="16" height="10" rx="2" fill="#5a9c4f"/>
+
+  <!-- Straps -->
+  <rect x="22" y="37" width="4" height="12" fill="#4a7c3f"/>
+  <rect x="38" y="37" width="4" height="12" fill="#4a7c3f"/>
+
+  <!-- Arms -->
+  <rect x="8" y="38" width="10" height="6" rx="3" fill="#f5c89a"/>
+  <rect x="46" y="38" width="10" height="6" rx="3" fill="#f5c89a"/>
+
+  <!-- Pitchfork (right hand) -->
+  <rect x="54" y="16" width="3" height="30" rx="1" fill="#8B6914"/>
+  <rect x="50" y="14" width="3" height="10" rx="1" fill="#888"/>
+  <rect x="54" y="14" width="3" height="10" rx="1" fill="#888"/>
+  <rect x="58" y="14" width="3" height="10" rx="1" fill="#888"/>
+
+  <!-- Legs -->
+  <rect x="22" y="55" width="8" height="9" rx="2" fill="#5a3a1a"/>
+  <rect x="34" y="55" width="8" height="9" rx="2" fill="#5a3a1a"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- Dead husk -->
+  <path d="M14 16 C8 12, 6 22, 14 24" fill="#5c3a1a" stroke="#3e2710" stroke-width="1"/>
+  <path d="M34 16 C40 12, 42 22, 34 24" fill="#5c3a1a" stroke="#3e2710" stroke-width="1"/>
+  <!-- Cob (dark) -->
+  <rect x="16" y="8" width="16" height="34" rx="8" fill="#8b0000" stroke="#5c0000" stroke-width="1.5" filter="url(#glow)"/>
+  <!-- Angry eyes -->
+  <circle cx="21" cy="20" r="3" fill="#ffeb3b"/>
+  <circle cx="27" cy="20" r="3" fill="#ffeb3b"/>
+  <circle cx="21" cy="20" r="1.2" fill="#000"/>
+  <circle cx="27" cy="20" r="1.2" fill="#000"/>
+  <!-- Eyebrows -->
+  <line x1="18" y1="16" x2="23" y2="17" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+  <line x1="30" y1="16" x2="25" y2="17" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+  <!-- Mouth -->
+  <path d="M19 28 Q24 32 29 28" stroke="#000" stroke-width="2" fill="#5c0000"/>
+  <!-- Spikes -->
+  <line x1="16" y1="10" x2="10" y2="6" stroke="#ff4444" stroke-width="2"/>
+  <line x1="32" y1="10" x2="38" y2="6" stroke="#ff4444" stroke-width="2"/>
+</svg>

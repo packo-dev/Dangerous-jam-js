@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dangerous Harvest - Playing</title>
+    <link rel="stylesheet" href="../css/game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- GAME CANVAS -->
+    <canvas id="game-canvas"></canvas>
+
+    <!-- HUD -->
+    <div id="hud">
+        <div id="hud-left">
+            <div id="hearts-container"></div>
+            <div id="wave-display">WAVE 1</div>
+        </div>
+        <div id="hud-center">
+            <div id="score-display">0</div>
+        </div>
+        <div id="hud-right">
+            <div id="time-display">00:00</div>
+        </div>
+    </div>
+
+    <!-- WAVE ANNOUNCEMENT -->
+    <div id="wave-announce" style="display:none;">
+        <span id="wave-announce-text">WAVE 1</span>
+    </div>
+
+    <!-- GAME OVER OVERLAY -->
+    <div id="gameover-screen" class="overlay" style="display:none;">
+        <div class="gameover-content">
+            <h1 class="gameover-title">GAME OVER</h1>
+            <p class="gameover-sub">Nothing was safe...</p>
+            <div class="gameover-scores">
+                <div class="score-row">
+                    <span class="score-label">SCORE</span>
+                    <span id="final-score" class="score-value">0</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">BEST</span>
+                    <span id="best-score" class="score-value">0</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">TIME</span>
+                    <span id="final-time" class="score-value">00:00</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">WAVE</span>
+                    <span id="final-wave" class="score-value">1</span>
+                </div>
+            </div>
+            <!-- NAME INPUT -->
+            <div id="name-input-section" class="name-input-section">
+                <label for="player-name" class="name-label">ENTER YOUR NAME</label>
+                <div class="name-row">
+                    <input type="text" id="player-name" class="name-input" maxlength="12" placeholder="Player" autocomplete="off">
+                    <button id="save-score-btn" class="btn btn-save">SAVE</button>
+                </div>
+            </div>
+
+            <!-- LEADERBOARD IN GAME OVER -->
+            <div id="gameover-leaderboard" class="leaderboard-list" style="display:none;"></div>
+
+            <div class="gameover-buttons">
+                <button id="restart-btn" class="btn btn-play">PLAY AGAIN</button>
+                <button id="menu-btn" class="btn btn-rules">MENU</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/game.js"></script>
+</body>
+</html>

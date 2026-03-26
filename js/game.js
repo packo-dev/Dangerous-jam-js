@@ -37,6 +37,7 @@ const nameInputSection = document.getElementById("name-input-section");
 const playerNameInput = document.getElementById("player-name");
 const saveScoreBtn = document.getElementById("save-score-btn");
 const gameoverLeaderboard = document.getElementById("gameover-leaderboard");
+const muteBtn = document.getElementById("mute-btn");
 
 // ============ CONFIGURATION ============
 const CONFIG = {
@@ -309,6 +310,7 @@ function updateItems(deltaTime) {
         if (item.state === "safe" && checkCollision(player, item)) {
             score += CONFIG.POINTS_PER_COLLECT;
             spawnParticles(item.x, item.y, "#4cff72", CONFIG.PARTICLE_COUNT_COLLECT);
+            AudioSystem.sfxCollect();
             items.splice(i, 1);
             continue;
         }
@@ -317,6 +319,7 @@ function updateItems(deltaTime) {
         if (item.state === "dangerous" && checkCollision(player, item)) {
             takeDamage();
             spawnParticles(item.x, item.y, "#ff4444", CONFIG.PARTICLE_COUNT_HIT);
+            AudioSystem.sfxHit();
             items.splice(i, 1);
             continue;
         }
@@ -448,6 +451,7 @@ function takeDamage() {
     renderHearts();
 
     if (lives <= 0) {
+        AudioSystem.sfxGameOver();
         gameOver();
     }
 }
@@ -456,6 +460,7 @@ function takeDamage() {
 function triggerNothingSafe() {
     nothingSafeActive = true;
     nothingSafeTimer = 2000;
+    AudioSystem.sfxNothingSafe();
 
     for (const item of items) {
         if (item.state === "safe" || item.state === "entering") {
@@ -486,6 +491,7 @@ function checkWaveProgress(deltaTime) {
 }
 
 function announceWave() {
+    AudioSystem.sfxWave();
     waveAnnounceText.textContent = `WAVE ${wave}`;
     waveAnnounce.style.display = "block";
     waveAnnounceText.style.animation = "none";
@@ -671,6 +677,7 @@ function startGame() {
     hud.style.display = "flex";
     waveAnnounce.style.display = "none";
 
+    AudioSystem.startMusic();
     announceWave();
 }
 
@@ -693,6 +700,8 @@ function gameOver() {
 
     const lastPlayerName = localStorage.getItem("dangerousHarvestPlayerName") || "";
     playerNameInput.value = lastPlayerName;
+
+    AudioSystem.stopMusic();
 
     hud.style.display = "none";
     waveAnnounce.style.display = "none";
@@ -800,6 +809,11 @@ playerNameInput.addEventListener("keydown", (e) => {
 
 playerNameInput.addEventListener("keyup", (e) => {
     e.stopPropagation();
+});
+
+muteBtn.addEventListener("click", () => {
+    const muted = AudioSystem.toggleMute();
+    muteBtn.textContent = muted ? "\u{1F507}" : "\u{1F50A}";
 });
 
 restartBtn.addEventListener("click", () => {

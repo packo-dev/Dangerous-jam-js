@@ -94,6 +94,30 @@ body {
     color: #aaa;
 }
 
+/* ============ MUTE BUTTON ============ */
+.mute-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.2s ease;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.mute-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #888;
+}
+
 /* ============ WAVE ANNOUNCEMENT ============ */
 #wave-announce {
     position: fixed;

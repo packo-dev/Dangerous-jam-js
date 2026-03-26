@@ -179,4 +179,4 @@ All commits follow the [Conventional Commits](https://www.conventionalcommits.or
 
 ## License
 
-This project was created for educational purposes as part of a Game Jam challenge.
+This project was created for educational purposes as part of a Game Jam challenge (March 2026).

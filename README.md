@@ -2,7 +2,7 @@
 
 > **Theme:** "Nothing is Safe"
 > **Tech:** Vanilla JavaScript, HTML5 Canvas, CSS3
-> **Team:** Le Fermier
+> **Team:** Ethan, Elif, Ranime
 > **Event:** Game Jam 2026
 
 ---
@@ -62,20 +62,23 @@ Dangerous-jam-js/
 ├── README.md                     # This file
 │
 ├── assets/
-│   └── img/
-│       ├── logo.svg              # Game logo (SVG)
-│       ├── farmer.svg            # Player sprite
-│       ├── field-bg.svg          # Game background
-│       ├── carrot-safe.svg       # Carrot (safe version)
-│       ├── carrot-danger.svg     # Carrot (mutated version)
-│       ├── corn-safe.svg         # Corn (safe)
-│       ├── corn-danger.svg       # Corn (mutated)
-│       ├── tomato-safe.svg       # Tomato (safe)
-│       ├── tomato-danger.svg     # Tomato (mutated/bomb)
-│       ├── chicken-safe.svg      # Chicken (safe)
-│       ├── chicken-danger.svg    # Chicken (mutated/demon)
-│       ├── egg-safe.svg          # Egg (safe)
-│       └── egg-danger.svg        # Egg (mutated/fire)
+│   ├── img/
+│   │   ├── logo.svg              # Game logo (SVG)
+│   │   ├── farmer.svg            # Player sprite
+│   │   ├── field-bg.svg          # Game background
+│   │   ├── carrot-safe.svg       # Carrot (safe version)
+│   │   ├── carrot-danger.svg     # Carrot (mutated version)
+│   │   ├── corn-safe.svg         # Corn (safe)
+│   │   ├── corn-danger.svg       # Corn (mutated)
+│   │   ├── tomato-safe.svg       # Tomato (safe)
+│   │   ├── tomato-danger.svg     # Tomato (mutated/bomb)
+│   │   ├── chicken-safe.svg      # Chicken (safe)
+│   │   ├── chicken-danger.svg    # Chicken (mutated/demon)
+│   │   ├── egg-safe.svg          # Egg (safe)
+│   │   └── egg-danger.svg        # Egg (mutated/fire)
+│   └── screenshots/
+│       ├── menu.png              # Menu screenshot
+│       └── gameplay.png          # Gameplay screenshot
 │
 ├── css/
 │   ├── style.css                 # Menu page styles
@@ -86,6 +89,7 @@ Dangerous-jam-js/
 │
 └── js/
     ├── menu.js                   # Menu navigation, modals, leaderboard display
+    ├── audio.js                  # Procedural chiptune music & sound effects (Web Audio API)
     └── game.js                   # Full game engine (rendering, physics, state)
 ```
 
@@ -99,6 +103,11 @@ Dangerous-jam-js/
 - **"Nothing is Safe" event** — random chaos moment where all items mutate at once
 - **5 lives** with invincibility frames after taking damage
 - **AABB collision detection** between player and items
+
+### Audio
+- **Procedural chiptune music** — generated in real-time via Web Audio API (no external files)
+- **Sound effects** — collect, hit, game over, wave announce, "Nothing is Safe" alarm
+- **Mute toggle** — speaker button in the HUD
 
 ### Visual Effects
 - **Screen shake** on damage
@@ -114,10 +123,20 @@ Dangerous-jam-js/
 
 ### UI/UX
 - **Responsive canvas** — adapts to any screen size
-- **HUD** — hearts, score, time, wave indicator
+- **HUD** — hearts, score, time, wave indicator, mute button
 - **Wave announcements** with pop-in animation
 - **Game over screen** with name input and inline leaderboard
 - **Menu** with Play, Rules, and Leaderboard modals
+
+---
+
+## Development Team
+
+| Member | Role | Contributions |
+|--------|------|---------------|
+| **Ethan** | Lead Developer & Game Designer | Game engine (movement, collisions, mutation system), HTML/CSS structure, scoring mechanics, audio system |
+| **Elif** | Creative Support & Assets | Color palette selection, visual style definition for SVG sprites |
+| **Ranime** | QA & Documentation | Debug testing, difficulty balancing, technical documentation |
 
 ---
 
@@ -127,7 +146,7 @@ Dangerous-jam-js/
 |------------|-------|
 | **HTML5** | Page structure, Canvas element, semantic markup |
 | **CSS3** | Flexbox/Grid layout, animations, gradients, `clip-path`, `backdrop-filter` |
-| **JavaScript (ES6+)** | Game loop (`requestAnimationFrame`), DOM manipulation, `localStorage`, Promises |
+| **JavaScript (ES6+)** | Game loop (`requestAnimationFrame`), DOM manipulation, `localStorage`, Promises, Web Audio API |
 | **SVG** | All game sprites and assets (scalable, no pixelation) |
 | **Google Fonts** | "Press Start 2P" (retro), "Inter" (UI) |
 
@@ -138,6 +157,7 @@ Dangerous-jam-js/
 - **AABB Collision** — Axis-Aligned Bounding Box overlap detection
 - **Asset Preloading** — `Promise`-based image loading before game starts
 - **`requestAnimationFrame`** — smooth 60fps rendering loop
+- **Web Audio API** — procedural music synthesis with oscillators and noise buffers
 - **`localStorage`** — persistent leaderboard and settings (JSON serialization)
 - **XSS Protection** — `escapeHtml()` sanitizes player names before rendering
 
@@ -147,7 +167,7 @@ Dangerous-jam-js/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/Dangerous-jam-js.git
+   git clone https://github.com/packo-dev/Dangerous-jam-js.git
    ```
 2. Open `index.html` in any modern browser
 3. No build step, no dependencies, no server required
@@ -173,7 +193,7 @@ All commits follow the [Conventional Commits](https://www.conventionalcommits.or
 
 ## Credits
 
-- **Le Fermier** — Game design, development
+- **Ethan, Elif & Ranime** — Game design & development
 - **Game Jam 2026** — "Nothing is Safe" theme
 - **Fonts:** [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P), [Inter](https://fonts.google.com/specimen/Inter)
 

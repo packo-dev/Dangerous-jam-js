@@ -17,9 +17,11 @@ The core mechanic revolves around the theme: every item starts as a helpful coll
 
 ## Screenshots
 
-| Menu | Gameplay | Game Over |
-|------|----------|-----------|
-| Logo + Play/Rules/Leaderboard | Canvas with HUD, items, farmer | Score + Name input + Leaderboard |
+### Menu
+![Menu](assets/screenshots/menu.png)
+
+### Gameplay
+![Gameplay](assets/screenshots/gameplay.png)
 
 ---
 

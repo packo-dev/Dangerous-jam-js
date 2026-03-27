@@ -537,6 +537,18 @@ function drawPlayer() {
         ctx.drawImage(img, -size / 2, -size / 2, size, size);
     }
 
+    ctx.shadowColor = "transparent";
+    ctx.shadowBlur = 0;
+    ctx.globalAlpha = isInvincible ? (Math.sin(Date.now() / 60) > 0 ? 1 : 0.3) : 1;
+    ctx.font = "bold 13px 'Press Start 2P', monospace";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "bottom";
+    ctx.fillStyle = "#fff";
+    ctx.strokeStyle = "#000";
+    ctx.lineWidth = 3;
+    ctx.strokeText("Ilyes", 0, -size / 2 - 6);
+    ctx.fillText("Ilyes", 0, -size / 2 - 6);
+
     ctx.restore();
 }
 
